@@ -1,0 +1,146 @@
+{
+  "name": "RSTA Sample Question Bank",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "You are Bowser One, a training aircraft. You need to request permission from ATC to taxi to runway 27.",
+      "options": [
+        "ATC, Bowser One, request taxi to runway two seven. Over.",
+        "Tower, this is Bowser One, we need to go to the runway.",
+        "Bowser One requesting taxi clearance.",
+        "ATC, Bowser One, taxi runway 27 please. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, request taxi to runway two seven. Over.",
+      "structureMode": "full",
+      "expectedKeywords": ["taxi", "runway", "two seven"]
+    },
+    {
+      "id": "q2",
+      "prompt": "ATC has instructed you to hold short of runway 27. Acknowledge this instruction.",
+      "options": [
+        "Holding short runway two seven. Over.",
+        "ATC, Bowser One, holding short runway two seven. Over.",
+        "Roger, will hold.",
+        "Bowser One copies, holding short. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "Holding short runway two seven. Over.",
+      "structureMode": "ack_short",
+      "expectedKeywords": ["holding short", "runway", "two seven"]
+    },
+    {
+      "id": "q3",
+      "prompt": "You didn't understand ATC's last transmission. Request clarification.",
+      "options": [
+        "ATC, say again. Over.",
+        "What did you say?",
+        "ATC, Bowser One, request repeat. Over.",
+        "Bowser One, repeat please."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, say again. Over.",
+      "structureMode": "clarify_request",
+      "expectedKeywords": ["say again"]
+    },
+    {
+      "id": "q4",
+      "prompt": "You are Bowser One and have been cleared for takeoff on runway 27. Acknowledge the clearance.",
+      "options": [
+        "ATC, Bowser One, cleared for takeoff runway two seven. Over.",
+        "Cleared takeoff. Out.",
+        "Roger, taking off.",
+        "Bowser One, runway two seven, cleared takeoff. Over."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, cleared for takeoff runway two seven. Over.",
+      "structureMode": "full",
+      "expectedKeywords": ["cleared", "takeoff", "runway", "two seven"]
+    },
+    {
+      "id": "q5",
+      "prompt": "You are Bowser One at 5000 feet and need to report your position to ATC.",
+      "options": [
+        "ATC, Bowser One, five thousand feet, over the field. Over.",
+        "This is Bowser One, we're at 5000.",
+        "Bowser One at five thousand.",
+        "ATC, position report, five thousand. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, five thousand feet, over the field. Over.",
+      "structureMode": "full",
+      "expectedKeywords": ["five thousand", "feet"]
+    },
+    {
+      "id": "q6",
+      "prompt": "ATC instructs you to descend to 3000 feet. Read back the instruction.",
+      "options": [
+        "Descending to three thousand feet. Over.",
+        "ATC, Bowser One, descending to three thousand feet. Over.",
+        "Bowser One, three thousand, roger.",
+        "Wilco, going down to 3000."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "Descending to three thousand feet. Over.",
+      "structureMode": "ack_short",
+      "expectedKeywords": ["descending", "three thousand", "feet"]
+    },
+    {
+      "id": "q7",
+      "prompt": "You are Bowser One and wish to declare a PAN-PAN situation due to a minor engine issue.",
+      "options": [
+        "ATC, Bowser One, PAN-PAN, PAN-PAN, PAN-PAN, minor engine issue, request priority landing. Over.",
+        "Mayday, Mayday, engine problem.",
+        "ATC, we have an engine problem.",
+        "Bowser One declaring emergency."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, PAN-PAN, PAN-PAN, PAN-PAN, minor engine issue, request priority landing. Over.",
+      "structureMode": "full",
+      "expectedKeywords": ["PAN-PAN", "engine", "priority"]
+    },
+    {
+      "id": "q8",
+      "prompt": "ATC clears you to land on runway 27. Acknowledge.",
+      "options": [
+        "Cleared to land runway two seven. Over.",
+        "ATC, Bowser One, cleared to land runway two seven. Over.",
+        "Landing runway 27, thanks.",
+        "Bowser One will land. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "Cleared to land runway two seven. Over.",
+      "structureMode": "ack_short",
+      "expectedKeywords": ["cleared", "land", "runway", "two seven"]
+    },
+    {
+      "id": "q9",
+      "prompt": "You have landed and vacated the runway. Report to ATC.",
+      "options": [
+        "ATC, Bowser One, runway vacated. Over.",
+        "We're off the runway now.",
+        "Bowser One clear.",
+        "Runway clear, Bowser One. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, runway vacated. Over.",
+      "structureMode": "full",
+      "expectedKeywords": ["runway", "vacated"]
+    },
+    {
+      "id": "q10",
+      "prompt": "You are ending communications with ATC for this session.",
+      "options": [
+        "ATC, Bowser One, switching off. Out.",
+        "Goodbye ATC.",
+        "Bowser One signing off.",
+        "That's all from us. Out."
+      ],
+      "correctIndex": 0,
+      "expectedSpokenAnswer": "ATC, Bowser One, switching off. Out.",
+      "structureMode": "full",
+      "expectedKeywords": ["switching off"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "receiverCallsignDefault": "ATC",
+  "acceptedReceiverTokens": ["atc", "ground", "tower", "approach", "departure"],
+  "scoringWeights": {
+    "clarity": 0.40,
+    "pace": 0.30,
+    "structure": 0.30
+  },
+  "paceConfig": {
+    "idealWpmMin": 120,
+    "idealWpmMax": 160,
+    "acceptableWpmMin": 100,
+    "acceptableWpmMax": 180,
+    "pauseThresholdMs": 700,
+    "longPauseThresholdMs": 1500
+  },
+  "costRates": {
+    "openai": 0.006,
+    "elevenlabs": 0.0003
+  },
+  "timeouts": {
+    "connectMs": 10000,
+    "finalizationMs": 5000,
+    "maxRecordingMs": 30000
+  },
+  "featureFlags": {
+    "realtimeMode": "direct",
+    "enableProxyFallback": true,
+    "debugLogging": false,
+    "lockSelectionDuringRecording": true,
+    "allowSkipScoring": false
+  }
+}

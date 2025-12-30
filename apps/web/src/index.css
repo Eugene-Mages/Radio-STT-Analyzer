@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Layer Customizations */
+@layer base {
+  html {
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-slate-900 text-slate-200;
+    min-height: 100vh;
+  }
+
+  /* Callsigns: Always uppercase, monospace, bold */
+  .callsign {
+    @apply font-mono font-bold uppercase tracking-wider;
+  }
+
+  /* R/T Phraseology: Monospace for exact phrases */
+  .rt-phrase {
+    @apply font-mono;
+  }
+
+  /* Tabular figures for aligned data (scores, timers) */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Component Layer */
+@layer components {
+  /* Card component base */
+  .card {
+    @apply bg-slate-800 rounded-card border border-slate-600 shadow-elevation-1;
+  }
+
+  /* Panel component base */
+  .panel {
+    @apply bg-slate-700 rounded-card p-4;
+  }
+
+  /* Button base styles */
+  .btn {
+    @apply px-4 py-2 rounded-button font-semibold transition-all duration-state;
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-info focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+
+  .btn-primary {
+    @apply btn bg-cyan-info text-slate-900 hover:bg-cyan-light;
+  }
+
+  .btn-success {
+    @apply btn bg-green-success text-white hover:bg-green-light hover:text-slate-900;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-critical text-white hover:bg-red-light hover:text-slate-900;
+  }
+
+  .btn-secondary {
+    @apply btn bg-slate-700 text-slate-200 hover:bg-slate-600 border border-slate-600;
+  }
+
+  /* Mic button special states */
+  .mic-btn {
+    @apply relative w-20 h-20 rounded-full flex items-center justify-center;
+    @apply transition-all duration-state;
+  }
+
+  .mic-btn-idle {
+    @apply mic-btn bg-slate-700 border-2 border-slate-600;
+    @apply hover:border-cyan-info hover:shadow-focus;
+  }
+
+  .mic-btn-listening {
+    @apply mic-btn bg-cyan-info border-2 border-cyan-light;
+    @apply shadow-glow-cyan scale-110;
+  }
+
+  .mic-btn-processing {
+    @apply mic-btn bg-amber-warning border-2 border-amber-light;
+    @apply animate-pulse-slow;
+  }
+
+  .mic-btn-success {
+    @apply mic-btn bg-green-success border-2 border-green-light;
+    @apply shadow-glow-green;
+  }
+
+  .mic-btn-error {
+    @apply mic-btn bg-red-critical border-2 border-red-light;
+    @apply shadow-glow-red;
+  }
+}
+
+/* Utility Layer */
+@layer utilities {
+  /* Text color utilities matching semantic mapping */
+  .text-primary {
+    @apply text-slate-200;
+  }
+
+  .text-secondary {
+    @apply text-slate-400;
+  }
+
+  .text-disabled {
+    @apply text-slate-600;
+  }
+
+  /* Background utilities */
+  .bg-primary {
+    @apply bg-slate-900;
+  }
+
+  .bg-secondary {
+    @apply bg-slate-800;
+  }
+
+  .bg-card {
+    @apply bg-slate-700;
+  }
+
+  /* Border utilities */
+  .border-default {
+    @apply border-slate-600;
+  }
+
+  .border-focus {
+    @apply border-cyan-info;
+  }
+
+  .border-error {
+    @apply border-red-critical;
+  }
+
+  /* Glow animation for listening state */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+    }
+  }
+
+  /* Scrollbar styling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.slate.600') theme('colors.slate.800');
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-600 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}
